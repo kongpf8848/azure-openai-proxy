@@ -10,9 +10,9 @@ Verified support projects：
 | [chatgpt-web](https://github.com/Chanzhaoyu/chatgpt-web) | √   |
 
 ## Online experience
-| URL                                                     | ScreenShot |
-| -------------------------------------------------------- | ------ |
-| [chat.kongpf8848.com](https://chat.kongpf8848.com) |   |
+Address: [https://chat.kongpf8848.com](https://chat.kongpf8848.com)
+
+![](https://github.com/kongpf8848/azure-openai-proxy/blob/master/assets/chatgpt-web.png) 
 
 ## Get Start
 
