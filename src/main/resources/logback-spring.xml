@@ -10,7 +10,7 @@
             <charset>${FILE_LOG_CHARSET}</charset>
         </encoder>
         <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
-            <fileNamePattern>/Users/kongpf/Desktop/azure-openai-proxy.%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+            <fileNamePattern>azure-openai-proxy.%d{yyyy-MM-dd}.%i.log</fileNamePattern>
             <cleanHistoryOnStart>false</cleanHistoryOnStart>
             <maxFileSize>500MB</maxFileSize>
             <totalSizeCap>0</totalSizeCap>
