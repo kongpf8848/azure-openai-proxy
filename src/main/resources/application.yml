@@ -1,0 +1,9 @@
+azure:
+  openai:
+    endpoint: ${AZURE_OPENAI_ENDPOINT:https://xxx.openai.azure.com/}
+    deployment_id: ${AZURE_OPENAI_DEPLOYMENT_ID:xxx}
+    api_version: ${AZURE_OPENAI_API_VERSION:2023-03-15-preview}
+spring:
+  application:
+    name: ${APP_NAME:azure-openai-proxy}
+    mode: ${APP_ENV:prod}

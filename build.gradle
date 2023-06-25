@@ -1,0 +1,63 @@
+import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+
+plugins {
+    id 'application'
+    id 'org.springframework.boot' version '2.7.0'
+    id 'io.spring.dependency-management' version '1.1.0'
+    id 'org.jetbrains.kotlin.jvm' version '1.7.10'
+    id 'org.jetbrains.kotlin.plugin.spring' version '1.7.10'
+}
+
+ext {
+    libraries = [
+            azure: "1.0.0-beta.2",
+            okhttp     : "4.11.0",
+            rxjava     : "2.2.21",
+    ]
+}
+def libs = rootProject.ext.libraries
+
+group = 'io.github.kongpf8848'
+version = '0.0.1'
+
+mainClassName = 'io.github.kongpf8848.azure.AzureOpenaiProxyApplicationKt'
+
+java {
+    sourceCompatibility = '11'
+}
+
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'com.fasterxml.jackson.module:jackson-module-kotlin'
+    implementation 'org.jetbrains.kotlin:kotlin-reflect'
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+
+    implementation "com.azure:azure-ai-openai:${libs.azure}"
+    implementation "com.squareup.okhttp3:okhttp:${libs.okhttp}"
+    implementation "com.squareup.okhttp3:logging-interceptor:${libs.okhttp}"
+    implementation "io.reactivex.rxjava2:rxjava:${libs.rxjava}"
+
+}
+
+tasks.withType(KotlinCompile) {
+    kotlinOptions {
+        freeCompilerArgs += '-Xjsr305=strict'
+        jvmTarget = '11'
+    }
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
