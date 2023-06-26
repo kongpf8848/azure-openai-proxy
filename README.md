@@ -1,16 +1,21 @@
-# azure-openai-proxy
 
-An application that proxy OpenAI API requests to the Azure OpenAI service，support streaming output and typing effects.
+<div align="center">
+  
+<h1 align="center">azure-openai-proxy</h1>
 
+English | [中文](./README_CN.md)
 
-Verified support projects:
+🚀 An application that proxy OpenAI API requests to the Azure OpenAI service，support streaming output and typing effects.
 
+</div>
+
+# Support projects
 | Name                                                     | Status |
 | -------------------------------------------------------- | ------ |
 | [chatgpt-web](https://github.com/Chanzhaoyu/chatgpt-web) | √   |
 
 ## Online experience
-Address: [https://chat.kongpf8848.com](https://chat.kongpf8848.com)
+-> [https://chat.kongpf8848.com](https://chat.kongpf8848.com)
 
 ![](https://github.com/kongpf8848/azure-openai-proxy/blob/master/assets/chatgpt-web.webp) 
 
