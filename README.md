@@ -1,38 +1,47 @@
+
 <div align="center">
   
 <h1 align="center">azure-openai-proxy</h1>
 
-[![license](https://img.shields.io/github/license/modelscope/modelscope.svg)](https://github.com/azure-openai-proxy/blob/master/LICENSE)
+中文 | [English](./README_EN.md)
 
-English | [中文](./README_CN.md)
-
-🚀 An application that proxy OpenAI API requests to the Azure OpenAI service，support streaming output and typing effects.
+🚀 一个代理OpenAI API请求到Azure OpenAI服务的应用程序，支持流式输出和打字效果。
 
 </div>
 
-## Support projects
-| Name                                                     | Status |
-| -------------------------------------------------------- | ------ |
+## 支持的项目
+| 名称                                                       | 状态  |
+|----------------------------------------------------------|-----|
 | [chatgpt-web](https://github.com/Chanzhaoyu/chatgpt-web) | ✅   |
 
-## Online experience
+## 在线体验
 🔗 [https://chat.kongpf8848.com](https://chat.kongpf8848.com)
 
-![](https://github.com/kongpf8848/azure-openai-proxy/blob/master/assets/chatgpt-web.webp) 
+![截图](https://github.com/kongpf8848/azure-openai-proxy/blob/master/assets/chatgpt-web.webp) 
 
-## Get Start
+## 开始
 
-### Retrieve key and endpoint
+### 获取密钥/终结点/部署名称
 
-To successfully make a call against Azure OpenAI, you'll need the following:
+要成功调用Azure OpenAI服务，需要提供以下内容:
 
-| Name                  | Desc                                                                                                                                                                                          | Default                                                  |
-| --------------------- |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------| ----------------------------- |
-| AZURE_OPENAI_ENDPOINT | This value can be found in the **Keys & Endpoint** section when examining your resource from the Azure portal.An example endpoint is: `https://test.openai.azure.com/`                        | https://xxx.openai.azure.com/ |
-| AZURE_OPENAI_DEPLOYMENT_ID   | This value will correspond to the custom name you chose for your deployment when you deployed a model. This value can be found under **Management** > **Deployments** in Azure OpenAI Studio. | xxx |
-| AZURE_OPENAI_API_VERSION  | Optional，API version，follow the YYYY-MM-DD format.<br>**Supported versions:**<br>2023-03-15-preview<br>2022-12-01<br>2023-05-15<br>2023-06-01-preview                                                  | 2023-03-15-preview |
+| 名称                         | 描述                                                                                                                                                                                                                                                                                | 默认值                                                  |
+|----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------| ----------------------------- |
+| AZURE_OPENAI_ENDPOINT      | 可以在Azure资源页面 **资源管理** -> **密钥和终结点**部分中找到此值。一个示例端点是:https://test.openai.azure.com/ |https://xxx.openai.azure.com/|
+| AZURE_OPENAI_DEPLOYMENT_ID | 此值对应于你在部署模型时选择的自定义名称。这个值可以在Azure OpenAI Studio **管理** -> **部署**下找到。 | xxx |
+| AZURE_OPENAI_API_VERSION   |可选，API 版本，遵循 YYYY-MM-DD格式。<br>**支持的版本:**<br>2023-03-15-preview<br>2022-12-01<br>2023-05-15<br>2023-06-01-preview| 2023-03-15-preview |
 
-### Build
+如下图所示，则
+
+AZURE_OPENAI_ENDPOINT=**https://cctest.openai.azure.com/**
+
+AZURE_OPENAI_DEPLOYMENT_ID=**gpt35**
+
+| 密钥和终结点                         | 部署名称 | 
+|----------------------------|----------------------------|
+|![azure_01](https://github.com/kongpf8848/azure-openai-proxy/blob/master/assets/azure_cn_01.png) |![azure_02](https://github.com/kongpf8848/azure-openai-proxy/blob/master/assets/azure_cn_02.png) |
+
+### 构建
 
 ````shell
 
@@ -41,7 +50,7 @@ To successfully make a call against Azure OpenAI, you'll need the following:
 docker build -t azure-openai-proxy .
 ````
 
-### Use Docker
+### 使用Docker
 
 ````shell
 docker run -d -p 8080:8080 \
@@ -51,7 +60,7 @@ docker run -d -p 8080:8080 \
   rainboy2010/azure-openai-proxy:latest
 ````
 
-### Use Curl
+### 使用Curl
 
 ````shell
 curl --location --request POST 'localhost:8080/v1/chat/completions' \
@@ -73,16 +82,17 @@ curl --location --request POST 'localhost:8080/v1/chat/completions' \
 }'
 ````
 
-### Use ChatGPT-Web
+### 使用ChatGPT-Web
 
 🔗 https://github.com/Chanzhaoyu/chatgpt-web
 
-Envs:
 
-- `OPENAI_API_KEY` Azure OpenAI API Key
-- `AZURE_OPENAI_ENDPOINT` Azure OpenAI API Endpoint
-- `AZURE_OPENAI_DEPLOYMENT_ID` Azure OpenAI API Deployment Id
-- `AZURE_OPENAI_API_VERSION` option，default is 2023-03-15-preview
+环境变量:
+
+- `OPENAI_API_KEY` Azure OpenAI API 密钥
+- `AZURE_OPENAI_ENDPOINT` Azure OpenAI API 终结点
+- `AZURE_OPENAI_DEPLOYMENT_ID` Azure OpenAI API 部署名称
+- `AZURE_OPENAI_API_VERSION` 可选，默认值为2023-03-15-preview
   
 docker-compose.yml:
 
@@ -123,13 +133,13 @@ networks:
     driver: bridge
 ````
 
-Run:
+运行:
 
 ````shell
 docker compose up -d
 ````
-## Resources
-- [Azure Website-https://portal.azure.com](https://portal.azure.com)
-- [Azure OpenAI Service REST API reference-https://learn.microsoft.com/en-us/azure/cognitive-services/openai/reference](https://learn.microsoft.com/en-us/azure/cognitive-services/openai/reference)
-- [OpenAI API reference-https://platform.openai.com/docs/api-reference](https://platform.openai.com/docs/api-reference)
+## 资源
+- [Azure网站-https://portal.azure.com](https://portal.azure.com)
+- [Azure OpenAI服务REST API介绍-https://learn.microsoft.com/zh-cn/azure/cognitive-services/openai/reference](https://learn.microsoft.com/zh-cn/azure/cognitive-services/openai/reference)
+- [OpenAI API介绍-https://platform.openai.com/docs/api-reference](https://platform.openai.com/docs/api-reference)
 
