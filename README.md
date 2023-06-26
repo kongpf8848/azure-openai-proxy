@@ -31,7 +31,7 @@
 | AZURE_OPENAI_DEPLOYMENT_ID | 此值对应于你在部署模型时选择的自定义名称。这个值可以在Azure OpenAI Studio **管理** -> **部署**下找到。 | xxx |
 | AZURE_OPENAI_API_VERSION   |可选，API 版本，遵循 YYYY-MM-DD格式。<br>**支持的版本:**<br>2023-03-15-preview<br>2022-12-01<br>2023-05-15<br>2023-06-01-preview| 2023-03-15-preview |
 
-如下图所示，则
+如下图所示，则:
 
 AZURE_OPENAI_ENDPOINT=**https://cctest.openai.azure.com/**
 
