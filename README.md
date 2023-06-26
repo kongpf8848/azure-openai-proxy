@@ -26,6 +26,15 @@ To successfully make a call against Azure OpenAI, you'll need the following:
 | AZURE_OPENAI_DEPLOYMENT_ID   | This value will correspond to the custom name you chose for your deployment when you deployed a model. This value can be found under **Resource Management** > **Deployments** in the Azure portal or alternatively under **Management** > **Deployments** in Azure OpenAI Studio. | xxx |
 | AZURE_OPENAI_API_VERSION  | [See here](https://learn.microsoft.com/en-us/azure/cognitive-services/openai/quickstart?tabs=command-line&pivots=rest-api) or Azure OpenAI Studio | 2023-03-15-preview |
 
+### Build
+
+````shell
+
+./gradlew build
+
+docker build -t azure-openai-proxy .
+````
+
 ### Use Docker
 
 ````shell
