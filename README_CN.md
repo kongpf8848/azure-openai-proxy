@@ -5,7 +5,7 @@
 
 中文 | [English](./README.md)
 
-🚀 一个代理OpenAI API请求到Azure OpenAI Service的应用程序，支持流输出和打字效果.
+🚀 一个代理OpenAI API请求到Azure OpenAI Service的应用程序，支持流式输出和打字效果.
 
 </div>
 
@@ -74,7 +74,7 @@ curl --location --request POST 'localhost:8080/v1/chat/completions' \
 
 ### 使用ChatGPT-Web
 
-ChatGPT Web: https://github.com/Chanzhaoyu/chatgpt-web
+🔗 https://github.com/Chanzhaoyu/chatgpt-web
 
 
 环境变量:
