@@ -128,7 +128,7 @@ Run:
 ````shell
 docker compose up -d
 ````
-## 资源
+## Resources
 - [Azure Website-https://portal.azure.com](https://portal.azure.com)
 - [OpenAI API reference-https://platform.openai.com/docs/api-reference](https://platform.openai.com/docs/api-reference)
 
