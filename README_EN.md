@@ -22,7 +22,7 @@ English | [中文](./README.md)
 
 ## Get Start
 
-### Retrieve key and endpoint
+### Retrieve key / endpoint / deployment id
 
 To successfully make a call against Azure OpenAI, you'll need the following:
 
