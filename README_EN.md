@@ -2,7 +2,7 @@
   
 <h1 align="center">azure-openai-proxy</h1>
 
-[![license](https://img.shields.io/github/license/modelscope/modelscope.svg)](https://github.com/azure-openai-proxy/blob/master/LICENSE)
+[![license](https://img.shields.io/github/license/modelscope/modelscope.svg)](https://github.com/kongpf8848/azure-openai-proxy/blob/master/LICENSE)
 
 English | [中文](./README.md)
 
