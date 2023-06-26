@@ -2,6 +2,8 @@
   
 <h1 align="center">azure-openai-proxy</h1>
 
+[![license](https://img.shields.io/github/license/modelscope/modelscope.svg)](https://github.com/kongpf8848/azure-openai-proxy/blob/master/LICENSE)
+
 中文 | [English](./README_EN.md)
 
 🚀 一个代理OpenAI API请求到Azure OpenAI服务的应用程序，支持流式输出和打字效果。
