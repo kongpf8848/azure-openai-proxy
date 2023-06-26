@@ -24,11 +24,11 @@ English | [中文](./README_CN.md)
 
 To successfully make a call against Azure OpenAI, you'll need the following:
 
-| Name                  | Desc                                                         | Default                                                  |
-| --------------------- | ------------------------------------------------------------ | ----------------------------- |
-| AZURE_OPENAI_ENDPOINT | This value can be found in the **Keys & Endpoint** section when examining your resource from the Azure portal. Alternatively, you can find the value in **Azure OpenAI Studio** > **Playground** > **Code View**. An example endpoint is: `https://test.openai.azure.com/`| https://xxx.openai.azure.com/ |
-| AZURE_OPENAI_DEPLOYMENT_ID   | This value will correspond to the custom name you chose for your deployment when you deployed a model. This value can be found under **Resource Management** > **Deployments** in the Azure portal or alternatively under **Management** > **Deployments** in Azure OpenAI Studio. | xxx |
-| AZURE_OPENAI_API_VERSION  | [See here](https://learn.microsoft.com/en-us/azure/cognitive-services/openai/quickstart?tabs=command-line&pivots=rest-api) or Azure OpenAI Studio | 2023-03-15-preview |
+| Name                  | Desc                                                                                                                                                                                          | Default                                                  |
+| --------------------- |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------| ----------------------------- |
+| AZURE_OPENAI_ENDPOINT | This value can be found in the **Keys & Endpoint** section when examining your resource from the Azure portal.An example endpoint is: `https://test.openai.azure.com/`                        | https://xxx.openai.azure.com/ |
+| AZURE_OPENAI_DEPLOYMENT_ID   | This value will correspond to the custom name you chose for your deployment when you deployed a model. This value can be found under **Management** > **Deployments** in Azure OpenAI Studio. | xxx |
+| AZURE_OPENAI_API_VERSION  | Optional，API version，follow the YYYY-MM-DD format.<br>**Supported versions:**<br>2023-03-15-preview<br>2022-12-01<br>2023-05-15<br>2023-06-01-preview                                                  | 2023-03-15-preview |
 
 ### Build
 
@@ -73,8 +73,7 @@ curl --location --request POST 'localhost:8080/v1/chat/completions' \
 
 ### Use ChatGPT-Web
 
-ChatGPT Web: https://github.com/Chanzhaoyu/chatgpt-web
-
+🔗 https://github.com/Chanzhaoyu/chatgpt-web
 
 Envs:
 
@@ -96,7 +95,7 @@ services:
     environment:
       OPENAI_API_KEY: <Azure OpenAI API Key>
       OPENAI_API_BASE_URL: http://azure-openai:8080
-      # OPENAI_API_MODEL: gpt-4
+      OPENAI_API_MODEL: gpt-3.5-turbo
       MAX_REQUEST_PER_HOUR: 1000
       TIMEOUT_MS: 600000
     depends_on:
@@ -129,5 +128,6 @@ docker compose up -d
 ````
 ## Resources
 - [Azure Website-https://portal.azure.com](https://portal.azure.com)
+- [Azure OpenAI Service REST API reference-https://learn.microsoft.com/en-us/azure/cognitive-services/openai/reference](https://learn.microsoft.com/en-us/azure/cognitive-services/openai/reference)
 - [OpenAI API reference-https://platform.openai.com/docs/api-reference](https://platform.openai.com/docs/api-reference)
 
