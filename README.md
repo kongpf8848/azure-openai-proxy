@@ -12,7 +12,7 @@ Verified support projects：
 ## Online experience
 Address: [https://chat.kongpf8848.com](https://chat.kongpf8848.com)
 
-![](https://github.com/kongpf8848/azure-openai-proxy/blob/master/assets/chatgpt-web.png) 
+![](https://github.com/kongpf8848/azure-openai-proxy/blob/master/assets/chatgpt-web.webp) 
 
 ## Get Start
 
