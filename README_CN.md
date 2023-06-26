@@ -17,7 +17,7 @@
 ## 在线体验
 🔗 [https://chat.kongpf8848.com](https://chat.kongpf8848.com)
 
-![](https://github.com/kongpf8848/azure-openai-proxy/blob/master/assets/chatgpt-web.webp) 
+![截图](https://github.com/kongpf8848/azure-openai-proxy/blob/master/assets/chatgpt-web.webp) 
 
 ## 开始
 
@@ -30,6 +30,16 @@
 | AZURE_OPENAI_ENDPOINT      | 可以在Azure资源页面 **资源管理** -> **密钥和终结点**部分中找到此值。一个示例端点是:https://test.openai.azure.com/ |https://xxx.openai.azure.com/|
 | AZURE_OPENAI_DEPLOYMENT_ID | 此值对应于你在部署模型时选择的自定义名称。这个值可以在Azure OpenAI Studio **管理** -> **部署**下找到。 | xxx |
 | AZURE_OPENAI_API_VERSION   |可选，API 版本，遵循 YYYY-MM-DD格式。<br>**支持的版本:**<br>2023-03-15-preview<br>2022-12-01<br>2023-05-15<br>2023-06-01-preview| 2023-03-15-preview |
+
+如下图所示，则
+
+AZURE_OPENAI_ENDPOINT=**https://cctest.openai.azure.com/**
+
+AZURE_OPENAI_DEPLOYMENT_ID=**gpt35**
+
+| 密钥和终结点                         | 部署名称 | 
+|----------------------------|----------------------------|
+|![azure_01](https://github.com/kongpf8848/azure-openai-proxy/blob/master/assets/azure_cn_01.png) |![azure_02](https://github.com/kongpf8848/azure-openai-proxy/blob/master/assets/azure_cn_02.png) |
 
 ### 构建
 
