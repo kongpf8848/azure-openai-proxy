@@ -128,7 +128,7 @@ networks:
 ````shell
 docker compose up -d
 ````
-# 资源
+## 资源
 - [Azure网站-https://portal.azure.com](https://portal.azure.com)
 - [OpenAI API介绍-https://platform.openai.com/docs/api-reference](https://platform.openai.com/docs/api-reference)
 

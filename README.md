@@ -9,13 +9,13 @@ English | [中文](./README_CN.md)
 
 </div>
 
-# Support projects
+## Support projects
 | Name                                                     | Status |
 | -------------------------------------------------------- | ------ |
-| [chatgpt-web](https://github.com/Chanzhaoyu/chatgpt-web) | √   |
+| [chatgpt-web](https://github.com/Chanzhaoyu/chatgpt-web) | ✅   |
 
 ## Online experience
--> [https://chat.kongpf8848.com](https://chat.kongpf8848.com)
+🔗 [https://chat.kongpf8848.com](https://chat.kongpf8848.com)
 
 ![](https://github.com/kongpf8848/azure-openai-proxy/blob/master/assets/chatgpt-web.webp) 
 
@@ -128,5 +128,7 @@ Run:
 ````shell
 docker compose up -d
 ````
-
+## 资源
+- [Azure Website-https://portal.azure.com](https://portal.azure.com)
+- [OpenAI API reference-https://platform.openai.com/docs/api-reference](https://platform.openai.com/docs/api-reference)
 
