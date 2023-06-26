@@ -5,7 +5,7 @@
 
 中文 | [English](./README.md)
 
-🚀 一个代理OpenAI API请求到Azure OpenAI Service的应用程序，支持流式输出和打字效果.
+🚀 一个代理OpenAI API请求到Azure OpenAI服务的应用程序，支持流式输出和打字效果。
 
 </div>
 
@@ -23,13 +23,13 @@
 
 ### 获取密钥和终结点
 
-要成功调用Azure OpenAI Service，需要提供以下内容:
+要成功调用Azure OpenAI服务，需要提供以下内容:
 
 | 名称                         | 描述                                                                                                                                                                                                                                                                                 | 默认值                                                  |
 |----------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------| ----------------------------- |
-| AZURE_OPENAI_ENDPOINT      | This value can be found in the **Keys & Endpoint** section when examining your resource from the Azure portal. Alternatively, you can find the value in **Azure OpenAI Studio** > **Playground** > **Code View**. An example endpoint is: `https://test.openai.azure.com/`         | https://xxx.openai.azure.com/ |
-| AZURE_OPENAI_DEPLOYMENT_ID | This value will correspond to the custom name you chose for your deployment when you deployed a model. This value can be found under **Resource Management** > **Deployments** in the Azure portal or alternatively under **Management** > **Deployments** in Azure OpenAI Studio. | xxx |
-| AZURE_OPENAI_API_VERSION   | [See here](https://learn.microsoft.com/en-us/azure/cognitive-services/openai/quickstart?tabs=command-line&pivots=rest-api) or Azure OpenAI Studio                                                                                                                                  | 2023-03-15-preview |
+| AZURE_OPENAI_ENDPOINT      | 可以在Azure资源页面 **资源管理** -> **密钥和终结点**部分中找到此值。一个示例端点是:https://test.openai.azure.com/。 |https://xxx.openai.azure.com/|
+| AZURE_OPENAI_DEPLOYMENT_ID | 此值对应于你在部署模型时选择的自定义名称。这个值可以在Azure OpenAI Studio **管理** -> **部署**下找到。 | xxx |
+| AZURE_OPENAI_API_VERSION   |可选，API 版本，遵循 YYYY-MM-DD格式。<br>**支持的版本:**<br>2023-03-15-preview<br>2022-12-01<br>2023-05-15<br>2023-06-01-preview| 2023-03-15-preview |
 
 ### 构建
 
@@ -130,5 +130,6 @@ docker compose up -d
 ````
 ## 资源
 - [Azure网站-https://portal.azure.com](https://portal.azure.com)
+- [Azure OpenAI服务REST API介绍-https://learn.microsoft.com/zh-cn/azure/cognitive-services/openai/reference](https://learn.microsoft.com/zh-cn/azure/cognitive-services/openai/reference)
 - [OpenAI API介绍-https://platform.openai.com/docs/api-reference](https://platform.openai.com/docs/api-reference)
 
