@@ -9,13 +9,13 @@
 
 </div>
 
-# 支持的项目
+## 支持的项目
 | 名称                                                       | 状态  |
 |----------------------------------------------------------|-----|
 | [chatgpt-web](https://github.com/Chanzhaoyu/chatgpt-web) | ✅   |
 
 ## 在线体验
--> [https://chat.kongpf8848.com](https://chat.kongpf8848.com)
+🔗 [https://chat.kongpf8848.com](https://chat.kongpf8848.com)
 
 ![](https://github.com/kongpf8848/azure-openai-proxy/blob/master/assets/chatgpt-web.webp) 
 
@@ -25,7 +25,7 @@
 
 要成功调用Azure OpenAI Service，需要提供以下内容:
 
-| 名称                         | 描述                                                                                                                                                                                                                                                                                 | Default                                                  |
+| 名称                         | 描述                                                                                                                                                                                                                                                                                 | 默认值                                                  |
 |----------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------| ----------------------------- |
 | AZURE_OPENAI_ENDPOINT      | This value can be found in the **Keys & Endpoint** section when examining your resource from the Azure portal. Alternatively, you can find the value in **Azure OpenAI Studio** > **Playground** > **Code View**. An example endpoint is: `https://test.openai.azure.com/`         | https://xxx.openai.azure.com/ |
 | AZURE_OPENAI_DEPLOYMENT_ID | This value will correspond to the custom name you chose for your deployment when you deployed a model. This value can be found under **Resource Management** > **Deployments** in the Azure portal or alternatively under **Management** > **Deployments** in Azure OpenAI Studio. | xxx |
@@ -79,10 +79,10 @@ ChatGPT Web: https://github.com/Chanzhaoyu/chatgpt-web
 
 环境变量:
 
-- `OPENAI_API_KEY` Azure OpenAI API Key
-- `AZURE_OPENAI_ENDPOINT` Azure OpenAI API Endpoint
-- `AZURE_OPENAI_DEPLOYMENT_ID` Azure OpenAI API Deployment Id
-- `AZURE_OPENAI_API_VERSION` option，default is 2023-03-15-preview
+- `OPENAI_API_KEY` Azure OpenAI API 密钥
+- `AZURE_OPENAI_ENDPOINT` Azure OpenAI API 终结点
+- `AZURE_OPENAI_DEPLOYMENT_ID` Azure OpenAI API 部署名称
+- `AZURE_OPENAI_API_VERSION` 可选，默认值为2023-03-15-preview
   
 docker-compose.yml:
 
@@ -128,5 +128,7 @@ networks:
 ````shell
 docker compose up -d
 ````
-
+# 资源
+- [Azure网站-https://portal.azure.com](https://portal.azure.com)
+- [OpenAI API介绍-https://platform.openai.com/docs/api-reference](https://platform.openai.com/docs/api-reference)
 
