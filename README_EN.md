@@ -35,10 +35,14 @@ To successfully make a call against Azure OpenAI, you'll need the following:
 ### Build
 
 ````shell
-
 ./gradlew build
 
+//build single platform
 docker build -t azure-openai-proxy .
+
+//build multiple platform
+docker buildx build -t azure-openai-proxy:v0.1 --platform linux/amd64,linux/arm64 . --push
+
 ````
 
 ### Use Docker
