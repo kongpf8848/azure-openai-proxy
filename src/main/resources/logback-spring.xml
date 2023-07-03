@@ -4,19 +4,19 @@
     <include resource="org/springframework/boot/logging/logback/defaults.xml"/>
     <include resource="org/springframework/boot/logging/logback/console-appender.xml" />
 
-    <appender name="ROLL_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <encoder>
-            <pattern>${FILE_LOG_PATTERN}</pattern>
-            <charset>${FILE_LOG_CHARSET}</charset>
-        </encoder>
-        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
-            <fileNamePattern>azure-openai-proxy.%d{yyyy-MM-dd}.%i.log</fileNamePattern>
-            <cleanHistoryOnStart>false</cleanHistoryOnStart>
-            <maxFileSize>500MB</maxFileSize>
-            <totalSizeCap>0</totalSizeCap>
-            <maxHistory>7</maxHistory>
-        </rollingPolicy>
-    </appender>
+<!--    <appender name="ROLL_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">-->
+<!--        <encoder>-->
+<!--            <pattern>${FILE_LOG_PATTERN}</pattern>-->
+<!--            <charset>${FILE_LOG_CHARSET}</charset>-->
+<!--        </encoder>-->
+<!--        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">-->
+<!--            <fileNamePattern>azure-openai-proxy.%d{yyyy-MM-dd}.%i.log</fileNamePattern>-->
+<!--            <cleanHistoryOnStart>false</cleanHistoryOnStart>-->
+<!--            <maxFileSize>500MB</maxFileSize>-->
+<!--            <totalSizeCap>0</totalSizeCap>-->
+<!--            <maxHistory>7</maxHistory>-->
+<!--        </rollingPolicy>-->
+<!--    </appender>-->
 
     <root level="INFO">
         <appender-ref ref="CONSOLE" />
