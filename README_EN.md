@@ -8,6 +8,7 @@ English | [中文](./README.md)
 
 🚀 An application that proxy OpenAI API requests to the Azure OpenAI service，support streaming output and typing effects.
 
+![proxy](https://github.com/kongpf8848/azure-openai-proxy/blob/master/assets/proxy.png) 
 </div>
 
 ## Support projects
