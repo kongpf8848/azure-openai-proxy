@@ -8,6 +8,8 @@
 
 🚀 一个代理OpenAI API请求到Azure OpenAI服务的应用程序，支持流式输出和打字效果。
 
+![proxy](https://github.com/kongpf8848/azure-openai-proxy/blob/master/assets/proxy.png) 
+
 </div>
 
 ## 支持的项目
