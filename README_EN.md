@@ -27,7 +27,7 @@ English | [中文](./README.md)
 
 | Name                  | Desc                                                                                                                                                                                          | Default                                                  |
 | --------------------- |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------| ----------------------------- |
-| OPENAI_API_KEY | This value can be found in the **Keys & Endpoint** section when examining your resource from the Azure portal.An example value is: `123`                        |  |
+| OPENAI_API_KEY | This value can be found in the **Keys & Endpoint** section when examining your resource from the Azure portal.An example value is: `3e5d77a442fe4ea7b356c66ad412358d`                        |  |
 | AZURE_OPENAI_ENDPOINT | This value can be found in the **Keys & Endpoint** section when examining your resource from the Azure portal.An example endpoint is: `https://test.openai.azure.com/`                        | https://xxx.openai.azure.com/ |
 | AZURE_OPENAI_DEPLOYMENT_ID   | This value will correspond to the custom name you chose for your deployment when you deployed a model. This value can be found under **Management** > **Deployments** in Azure OpenAI Studio. | xxx |
 | AZURE_OPENAI_API_VERSION  | Optional，API version，follow the YYYY-MM-DD format.<br>**Supported versions:**<br>2023-03-15-preview<br>2022-12-01<br>2023-05-15<br>2023-06-01-preview                                                  | 2023-03-15-preview |
