@@ -103,6 +103,7 @@ services:
       OPENAI_API_KEY: <Azure OpenAI API Key>
       OPENAI_API_BASE_URL: http://azure-openai:8080
       OPENAI_API_MODEL: gpt-3.5-turbo
+      #OPENAI_API_MODEL: gpt-3.5-turbo-16k
       MAX_REQUEST_PER_HOUR: 1000
       TIMEOUT_MS: 600000
     depends_on:
@@ -120,6 +121,7 @@ services:
       AZURE_OPENAI_ENDPOINT: <Azure OpenAI API Endpoint>
       AZURE_OPENAI_DEPLOYMENT_ID: <Azure OpenAI API Deployment ID>
       AZURE_OPENAI_API_VERSION: 2023-03-15-preview
+      #AZURE_OPENAI_API_VERSION: "2023-05-15"
     networks:
       - chatgpt-ns
 
