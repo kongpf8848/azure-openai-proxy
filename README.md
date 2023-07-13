@@ -26,19 +26,18 @@
 
 ### 获取密钥/终结点/部署名称
 
-要成功调用Azure OpenAI服务，需要提供以下内容:
-
 | 名称                         | 描述                                                                                                                                                                                                                                                                                | 默认值                                                  |
 |----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------| ----------------------------- |
+| OPENAI_API_KEY     | 可以在Azure资源页面 **资源管理** -> **密钥和终结点**部分中找到此值。 |无|
 | AZURE_OPENAI_ENDPOINT      | 可以在Azure资源页面 **资源管理** -> **密钥和终结点**部分中找到此值。一个示例端点是:https://test.openai.azure.com/ |https://xxx.openai.azure.com/|
 | AZURE_OPENAI_DEPLOYMENT_ID | 此值对应于你在部署模型时选择的自定义名称。这个值可以在Azure OpenAI Studio **管理** -> **部署**下找到。 | xxx |
 | AZURE_OPENAI_API_VERSION   |可选，API 版本，遵循 YYYY-MM-DD格式。<br>**支持的版本:**<br>2023-03-15-preview<br>2022-12-01<br>2023-05-15<br>2023-06-01-preview| 2023-03-15-preview |
 
 如下图所示，则:
 
-AZURE_OPENAI_ENDPOINT=**https://cctest.openai.azure.com/**
+AZURE_OPENAI_ENDPOINT = **https://cctest.openai.azure.com/**
 
-AZURE_OPENAI_DEPLOYMENT_ID=**gpt35**
+AZURE_OPENAI_DEPLOYMENT_ID = **gpt35**
 
 | 密钥和终结点                         | 部署名称 | 
 |----------------------------|----------------------------|
