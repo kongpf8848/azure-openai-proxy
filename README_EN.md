@@ -19,23 +19,22 @@ English | [中文](./README.md)
 ## Online experience
 🔗 [https://chat.kongpf8848.com](https://chat.kongpf8848.com)
 
-![](https://github.com/kongpf8848/azure-openai-proxy/blob/master/assets/chatgpt-web.webp) 
+![screenshot](https://github.com/kongpf8848/azure-openai-proxy/blob/master/assets/chatgpt-web.webp) 
 
 ## Get Start
 
-### Retrieve key / endpoint / deployment id
-
-To successfully make a call against Azure OpenAI, you'll need the following:
+### Retrieve api key / endpoint / deployment id
 
 | Name                  | Desc                                                                                                                                                                                          | Default                                                  |
 | --------------------- |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------| ----------------------------- |
+| OPENAI_API_KEY | This value can be found in the **Keys & Endpoint** section when examining your resource from the Azure portal.An example value is: `123`                        |  |
 | AZURE_OPENAI_ENDPOINT | This value can be found in the **Keys & Endpoint** section when examining your resource from the Azure portal.An example endpoint is: `https://test.openai.azure.com/`                        | https://xxx.openai.azure.com/ |
 | AZURE_OPENAI_DEPLOYMENT_ID   | This value will correspond to the custom name you chose for your deployment when you deployed a model. This value can be found under **Management** > **Deployments** in Azure OpenAI Studio. | xxx |
 | AZURE_OPENAI_API_VERSION  | Optional，API version，follow the YYYY-MM-DD format.<br>**Supported versions:**<br>2023-03-15-preview<br>2022-12-01<br>2023-05-15<br>2023-06-01-preview                                                  | 2023-03-15-preview |
 
 ### Build
 
-````shell
+```shell
 ./gradlew build
 
 //build single platform
@@ -44,21 +43,21 @@ docker build -t azure-openai-proxy .
 //build multiple platform
 docker buildx build -t azure-openai-proxy:v0.1 --platform linux/amd64,linux/arm64 . --push
 
-````
+```
 
 ### Use Docker
 
-````shell
+```shell
 docker run -d -p 8080:8080 \
   --env AZURE_OPENAI_ENDPOINT=your_azure_endpoint \
   --env AZURE_OPENAI_DEPLOYMENT_ID=your_azure_deployment_id \
   --env AZURE_OPENAI_API_VERSION=your_azure_api_version \
   rainboy2010/azure-openai-proxy:latest
-````
+```
 
 ### Use Curl
 
-````shell
+```shell
 curl --location --request POST 'localhost:8080/v1/chat/completions' \
 -H 'Authorization: Bearer <Azure OpenAI Key>' \
 -H 'Content-Type: application/json' \
@@ -76,13 +75,13 @@ curl --location --request POST 'localhost:8080/v1/chat/completions' \
     ],
     "stream": true
 }'
-````
+```
 
 ### Use ChatGPT-Web
 
 🔗 https://github.com/Chanzhaoyu/chatgpt-web
 
-Envs:
+Environments:
 
 - `OPENAI_API_KEY` Azure OpenAI API Key
 - `AZURE_OPENAI_ENDPOINT` Azure OpenAI API Endpoint
@@ -91,7 +90,7 @@ Envs:
   
 docker-compose.yml:
 
-````yaml
+```yaml
 version: '3'
 
 services:
@@ -128,13 +127,15 @@ services:
 networks:
   chatgpt-ns:
     driver: bridge
-````
+```
+Replace `<Azure OpenAI API Key>`，`<Azure OpenAI API Endpoint>`，`<Azure OpenAI API Deployment ID>` with the specific value
 
 Run:
 
-````shell
+```shell
 docker compose up -d
-````
+```
+
 ## Resources
 - [Azure Website-https://portal.azure.com](https://portal.azure.com)
 - [Azure OpenAI Service REST API reference-https://learn.microsoft.com/en-us/azure/cognitive-services/openai/reference](https://learn.microsoft.com/en-us/azure/cognitive-services/openai/reference)
