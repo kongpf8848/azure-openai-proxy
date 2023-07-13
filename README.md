@@ -20,7 +20,7 @@
 ## 在线体验
 🔗 [https://chat.kongpf8848.com](https://chat.kongpf8848.com)
 
-![截图](https://github.com/kongpf8848/azure-openai-proxy/blob/master/assets/chatgpt-web.webp) 
+![screenshot](https://github.com/kongpf8848/azure-openai-proxy/blob/master/assets/chatgpt-web.webp) 
 
 ## 开始
 
@@ -28,16 +28,18 @@
 
 | 名称                         | 描述                                                                                                                                                                                                                                                                                | 默认值                                                  |
 |----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------| ----------------------------- |
-| OPENAI_API_KEY     | 可以在Azure资源页面 **资源管理** -> **密钥和终结点**部分中找到此值。 |无|
+| OPENAI_API_KEY     | 可以在Azure资源页面 **资源管理** -> **密钥和终结点**部分中找到此值。一个示例值是:3e5d77a442fe4ea7b356c66ad412358d |无|
 | AZURE_OPENAI_ENDPOINT      | 可以在Azure资源页面 **资源管理** -> **密钥和终结点**部分中找到此值。一个示例端点是:https://test.openai.azure.com/ |https://xxx.openai.azure.com/|
 | AZURE_OPENAI_DEPLOYMENT_ID | 此值对应于你在部署模型时选择的自定义名称。这个值可以在Azure OpenAI Studio **管理** -> **部署**下找到。 | xxx |
 | AZURE_OPENAI_API_VERSION   |可选，API 版本，遵循 YYYY-MM-DD格式。<br>**支持的版本:**<br>2023-03-15-preview<br>2022-12-01<br>2023-05-15<br>2023-06-01-preview| 2023-03-15-preview |
 
 如下图所示，则:
 
-AZURE_OPENAI_ENDPOINT = **https://cctest.openai.azure.com/**
+OPENAI_API_KEY = `3e5d77a442fe4ea7b356c66ad412358d`
 
-AZURE_OPENAI_DEPLOYMENT_ID = **gpt35**
+AZURE_OPENAI_ENDPOINT = `https://cctest.openai.azure.com/`
+
+AZURE_OPENAI_DEPLOYMENT_ID = `gpt35`
 
 | 密钥和终结点                         | 部署名称 | 
 |----------------------------|----------------------------|
@@ -45,7 +47,7 @@ AZURE_OPENAI_DEPLOYMENT_ID = **gpt35**
 
 ### 构建
 
-````shell
+```shell
 
 ./gradlew build
 
@@ -55,21 +57,21 @@ docker build -t azure-openai-proxy .
 //build multiple platform
 docker buildx build -t azure-openai-proxy:v0.1 --platform linux/amd64,linux/arm64 . --push
 
-````
+```
 
 ### 使用Docker
 
-````shell
+```shell
 docker run -d -p 8080:8080 \
   --env AZURE_OPENAI_ENDPOINT=your_azure_endpoint \
   --env AZURE_OPENAI_DEPLOYMENT_ID=your_azure_deployment_id \
   --env AZURE_OPENAI_API_VERSION=your_azure_api_version \
   rainboy2010/azure-openai-proxy:latest
-````
+```
 
 ### 使用Curl
 
-````shell
+```shell
 curl --location --request POST 'localhost:8080/v1/chat/completions' \
 -H 'Authorization: Bearer <Azure OpenAI Key>' \
 -H 'Content-Type: application/json' \
@@ -87,7 +89,7 @@ curl --location --request POST 'localhost:8080/v1/chat/completions' \
     ],
     "stream": true
 }'
-````
+```
 
 ### 使用ChatGPT-Web
 
@@ -103,7 +105,7 @@ curl --location --request POST 'localhost:8080/v1/chat/completions' \
   
 docker-compose.yml:
 
-````yaml
+```yaml
 version: '3'
 
 services:
@@ -140,13 +142,15 @@ services:
 networks:
   chatgpt-ns:
     driver: bridge
-````
+```
+替换文件中的`<Azure OpenAI API Key>`，`<Azure OpenAI API Endpoint>`，`<Azure OpenAI API Deployment ID>`为具体的值
 
 运行:
 
-````shell
+```shell
 docker compose up -d
-````
+```
+
 ## 资源
 - [Azure网站-https://portal.azure.com](https://portal.azure.com)
 - [Azure OpenAI服务REST API介绍-https://learn.microsoft.com/zh-cn/azure/cognitive-services/openai/reference](https://learn.microsoft.com/zh-cn/azure/cognitive-services/openai/reference)
