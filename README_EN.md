@@ -16,8 +16,7 @@ English | [中文](./README.md)
 | -------------------------------------------------------- | ------ |
 | [chatgpt-web](https://github.com/Chanzhaoyu/chatgpt-web) | ✅   |
 
-## Online experience
-🔗 [https://chat.kongpf8848.com](https://chat.kongpf8848.com)
+## Screenshot
 
 ![screenshot](https://github.com/kongpf8848/azure-openai-proxy/blob/master/assets/chatgpt-web.webp) 
 
