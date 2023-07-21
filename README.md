@@ -54,7 +54,7 @@ AZURE_OPENAI_DEPLOYMENT_ID = `gpt35`
 docker build -t azure-openai-proxy .
 
 ## build multiple platform
-docker buildx build -t azure-openai-proxy --platform linux/amd64,linux/arm64 . --push
+docker buildx build -t xxx/azure-openai-proxy --platform linux/amd64,linux/arm64 . --push
 
 ```
 
