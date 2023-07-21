@@ -17,8 +17,7 @@
 |----------------------------------------------------------|-----|
 | [chatgpt-web](https://github.com/Chanzhaoyu/chatgpt-web) | ✅   |
 
-## 在线体验
-🔗 [https://chat.kongpf8848.com](https://chat.kongpf8848.com)
+## 截图
 
 ![screenshot](https://github.com/kongpf8848/azure-openai-proxy/blob/master/assets/chatgpt-web.webp) 
 
