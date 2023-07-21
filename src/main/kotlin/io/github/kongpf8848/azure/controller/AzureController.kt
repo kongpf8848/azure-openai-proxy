@@ -46,12 +46,12 @@ class AzureController {
 
         val requestContent = String((request.inputStream as InputStream).readBytes())
 
+        log.info("request delay:{}", config.api_delay_ms.toString())
         log.info("request method:{}", request.method)
         log.info("request ContentType:{}", request.contentType)
         log.info("request.url:{}", request.requestURL)
         log.info("request content:{}", requestContent)
         val key = request.getHeader("Authorization").replace("Bearer", "").trim { it <= ' ' }
-        log.info("request authorization key:{}", key)
         val url = "${config.endpoint}openai/deployments/${config.deployment_id}/chat/completions?api-version=${config.api_version}"
         val requestBody = RequestBody.create(request.contentType.toMediaType(), requestContent)
         val okhttpRequest = Request.Builder()
@@ -68,7 +68,6 @@ class AzureController {
             override fun onResponse(call: Call, response: Response) {
                 getObservable(response).subscribe(object : DisposableObserver<String>() {
                     override fun onNext(data: String) {
-                        log.info("==========onNext:$data")
                         try {
                             sseEmitter.send(data)
                         } catch (e: IOException) {
@@ -95,7 +94,8 @@ class AzureController {
     }
 
     fun getObservable(response: Response): Observable<String> {
-        val ob1 = Observable.interval(50, TimeUnit.MILLISECONDS)
+        val delay=if(config.api_delay_ms>0) config.api_delay_ms else 0
+        val ob1 = Observable.interval(delay, TimeUnit.MILLISECONDS)
         val ob2 = Observable.create { emitter: ObservableEmitter<String> ->
             if (response.isSuccessful) {
                 val inputStream = response.body!!.byteStream()

@@ -16,7 +16,8 @@ import org.springframework.stereotype.Component
 @Setter
 @ToString
 class AzureConfig {
-     var endpoint: String? = null
-     var deployment_id: String? = null
-     var api_version: String? = null
+    var endpoint: String? = null
+    var deployment_id: String? = null
+    var api_version: String? = null
+    var api_delay_ms: Long = 50L
 }

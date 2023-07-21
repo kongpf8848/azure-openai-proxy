@@ -41,7 +41,7 @@ English | [中文](./README.md)
 docker build -t azure-openai-proxy .
 
 //build multiple platform
-docker buildx build -t azure-openai-proxy:v0.1 --platform linux/amd64,linux/arm64 . --push
+docker buildx build -t azure-openai-proxy --platform linux/amd64,linux/arm64 . --push
 
 ```
 
@@ -79,15 +79,16 @@ curl --location --request POST 'localhost:8080/v1/chat/completions' \
 
 ### Use ChatGPT-Web
 
-🔗 https://github.com/Chanzhaoyu/chatgpt-web
+🔗 [https://github.com/Chanzhaoyu/chatgpt-web](https://github.com/Chanzhaoyu/chatgpt-web)
 
 Environments:
 
 - `OPENAI_API_KEY` Azure OpenAI API Key
 - `AZURE_OPENAI_ENDPOINT` Azure OpenAI API Endpoint
 - `AZURE_OPENAI_DEPLOYMENT_ID` Azure OpenAI API Deployment Id
-- `AZURE_OPENAI_API_VERSION` option，default is 2023-03-15-preview
-  
+- `AZURE_OPENAI_API_VERSION` option，API version，default is 2023-03-15-preview
+- `AZURE_OPENAI_API_DELAY` option，Stream output with delay interval every time，the unit is milliseconds，default is 50
+- 
 docker-compose.yml:
 
 ```yaml

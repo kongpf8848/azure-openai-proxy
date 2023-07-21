@@ -26,13 +26,12 @@
 
 ### 获取密钥/终结点/部署名称
 
-| 名称                         | 描述                                                                                                                                                                                                                                                                                | 默认值                                                  |
-|----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------| ----------------------------- |
-| OPENAI_API_KEY     | 可以在Azure资源页面 **资源管理** -> **密钥和终结点**部分中找到此值。一个示例值是:3e5d77a442fe4ea7b356c66ad412358d |无|
-| AZURE_OPENAI_ENDPOINT      | 可以在Azure资源页面 **资源管理** -> **密钥和终结点**部分中找到此值。一个示例端点是:https://test.openai.azure.com/ |https://xxx.openai.azure.com/|
-| AZURE_OPENAI_DEPLOYMENT_ID | 此值对应于你在部署模型时选择的自定义名称。这个值可以在Azure OpenAI Studio **管理** -> **部署**下找到。 | xxx |
-| AZURE_OPENAI_API_VERSION   |可选，API 版本，遵循 YYYY-MM-DD格式。<br>**支持的版本:**<br>2023-03-15-preview<br>2022-12-01<br>2023-05-15<br>2023-06-01-preview| 2023-03-15-preview |
-
+| 名称                     | 描述                                                                                                               | 默认值                           |
+|------------------------|------------------------------------------------------------------------------------------------------------------|-------------------------------|
+| OPENAI_API_KEY     | 可以在Azure资源页面 **资源管理** -> **密钥和终结点**部分中找到此值。一个示例值是:3e5d77a442fe4ea7b356c66ad412358d                               | 无                             |
+| AZURE_OPENAI_ENDPOINT  | 可以在Azure资源页面 **资源管理** -> **密钥和终结点**部分中找到此值。一个示例端点是:https://test.openai.azure.com/                                | https://xxx.openai.azure.com/ |
+| AZURE_OPENAI_DEPLOYMENT_ID | 此值对应于你在部署模型时选择的自定义名称。这个值可以在Azure OpenAI Studio **管理** -> **部署**下找到。                                              | xxx                           |
+| AZURE_OPENAI_API_VERSION | 可选，API 版本，遵循 YYYY-MM-DD格式。<br>**支持的版本:**<br>2023-03-15-preview<br>2022-12-01<br>2023-05-15<br>2023-06-01-preview | 2023-03-15-preview            |
 如下图所示，则:
 
 OPENAI_API_KEY = `3e5d77a442fe4ea7b356c66ad412358d`
@@ -51,11 +50,11 @@ AZURE_OPENAI_DEPLOYMENT_ID = `gpt35`
 
 ./gradlew build
 
-//build single platform
+## build single platform
 docker build -t azure-openai-proxy .
 
-//build multiple platform
-docker buildx build -t azure-openai-proxy:v0.1 --platform linux/amd64,linux/arm64 . --push
+## build multiple platform
+docker buildx build -t azure-openai-proxy --platform linux/amd64,linux/arm64 . --push
 
 ```
 
@@ -93,16 +92,16 @@ curl --location --request POST 'localhost:8080/v1/chat/completions' \
 
 ### 使用ChatGPT-Web
 
-🔗 https://github.com/Chanzhaoyu/chatgpt-web
-
+🔗 [https://github.com/Chanzhaoyu/chatgpt-web](https://github.com/Chanzhaoyu/chatgpt-web)
 
 环境变量:
 
 - `OPENAI_API_KEY` Azure OpenAI API 密钥
 - `AZURE_OPENAI_ENDPOINT` Azure OpenAI API 终结点
 - `AZURE_OPENAI_DEPLOYMENT_ID` Azure OpenAI API 部署名称
-- `AZURE_OPENAI_API_VERSION` 可选，默认值为2023-03-15-preview
-  
+- `AZURE_OPENAI_API_VERSION` 可选，API版本，默认值为2023-03-15-preview
+- `AZURE_OPENAI_API_DELAY` 可选，流式输出每次延迟间隔，单位为毫秒，默认值为50
+
 docker-compose.yml:
 
 ```yaml
@@ -136,6 +135,7 @@ services:
       AZURE_OPENAI_DEPLOYMENT_ID: <Azure OpenAI API Deployment ID>
       AZURE_OPENAI_API_VERSION: 2023-03-15-preview
       #AZURE_OPENAI_API_VERSION: "2023-05-15"
+      AZURE_OPENAI_API_DELAY: 50
     networks:
       - chatgpt-ns
 
