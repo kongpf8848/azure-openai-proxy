@@ -114,8 +114,8 @@ services:
     environment:
       OPENAI_API_KEY: <Azure OpenAI API Key>
       OPENAI_API_BASE_URL: http://azure-openai:8080
+      #模型名称，如gpt-3.5-turbo，gpt-3.5-turbo-16k，gpt-4，gpt-4-32k
       OPENAI_API_MODEL: gpt-3.5-turbo
-      #OPENAI_API_MODEL: gpt-3.5-turbo-16k
       MAX_REQUEST_PER_HOUR: 1000
       TIMEOUT_MS: 600000
     depends_on:
@@ -153,5 +153,7 @@ docker compose up -d
 ## 资源
 - [Azure网站-https://portal.azure.com](https://portal.azure.com)
 - [Azure OpenAI服务REST API介绍-https://learn.microsoft.com/zh-cn/azure/cognitive-services/openai/reference](https://learn.microsoft.com/zh-cn/azure/cognitive-services/openai/reference)
+- [Azure OpenAI 申请地址-https://aka.ms/oaiapply](https://aka.ms/oaiapply)
+- [Azure OpenAI GPT4 申请地址-https://aka.ms/oai/get-gpt4](https://aka.ms/oai/get-gpt4)
 - [OpenAI API介绍-https://platform.openai.com/docs/api-reference](https://platform.openai.com/docs/api-reference)
 
